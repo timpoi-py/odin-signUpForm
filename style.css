@@ -1,0 +1,44 @@
+:root {
+  --blur: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.main__sign-up {
+  width: 80%;
+  height: 100%;
+  background-image: url(./images/gino-xZdwU-Yiqzc-unsplash.jpg);
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sign-up__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+
+  background-color: rgb(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+}
