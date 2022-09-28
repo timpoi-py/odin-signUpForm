@@ -116,6 +116,16 @@ body {
   font-size: 1.2em;
 }
 
+.forms__section {
+  display: grid;
+  gap: 1em;
+}
+
+.forms__section h2 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
 #form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(250px, 50%), 1fr));
@@ -124,6 +134,7 @@ body {
 .form__div {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   padding: 0.5em;
 }
@@ -133,7 +144,47 @@ body {
 }
 
 input {
-  height: 1.8em;
-  border-radius: 0.3em;
-  border: 1px solid black;
+  height: 3em;
+  border: 0;
+  outline-offset: 2px;
+  outline: 1px solid rgb(0 0 0 / 0.4);
+}
+
+input:focus {
+  outline: 1px solid rgba(255, 123, 0, 0.8);
+}
+
+input:valid {
+  outline: 1px solid green;
+}
+
+input::placeholder {
+  position: absolute;
+  font-size: 0.8em;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.submit__div {
+  display: grid;
+  gap: 1em;
+}
+
+#submitBtn {
+  padding: 0.8em 1.2em;
+  border: 0;
+  background-image: linear-gradient(rgb(99, 99, 99), #333);
+  color: white;
+  font-weight: 700;
+  font-size: 1.2em;
+  width: max-content;
+}
+
+#submitBtn:hover,
+#submitBtn:focus {
+  background-image: linear-gradient(rgb(154, 154, 154), rgb(110, 110, 110));
 }

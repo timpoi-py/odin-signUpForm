@@ -46,23 +46,38 @@
           </p>
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="sign-up__divs" class="forms__section">
+        <div class="sign-up__divs forms__section">
           <h2>Let's do this!</h2>
           <form action="#" method="post" id="form">
             <div class="form__div">
-              <label for="first-name">FIRST NAME</label>
-              <input required type="text" name="first-name" id="first-name" />
+              <input
+                required
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder=" * First Name"
+                pattern="^[^0-9]+$"
+              />
             </div>
             <div class="form__div">
-              <label for="last-name">LAST NAME</label>
-              <input required type="text" name="last-name" id="last-name" />
+              <input
+                required
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder=" * Last Name"
+              />
             </div>
             <div class="form__div">
-              <label for="email">EMAIL</label>
-              <input required type="email" name="email" id="email" />
+              <input
+                required
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" * Email Address"
+              />
             </div>
             <div class="form__div">
-              <label for="phone-number">PHONE NUMBER</label>
               <input
                 required
                 type="tel"
@@ -70,25 +85,33 @@
                 id="phone-number"
                 minlength="10"
                 maxlength="14"
+                placeholder=" * Phone Number"
               />
             </div>
             <div class="form__div">
-              <label for="password">PASSWORD</label>
-              <input required type="password" name="password" id="password" />
+              <input
+                required
+                type="password"
+                name="password"
+                id="password"
+                placeholder=" * Password"
+              />
             </div>
             <div class="form__div">
-              <label for="confirm-password">CONFIRM PASSWORD</label>
               <input
                 required
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
+                placeholder=" * Confirm Password"
               />
             </div>
           </form>
         </div>
-        <div class="sign-up__divs">
-          <button type="submit" form="form">Create Account</button>
+        <div class="sign-up__divs submit__div">
+          <button type="submit" form="form" id="submitBtn">
+            Create Account
+          </button>
           <p>I already have an account. <a href="#">Log in</a></p>
         </div>
       </div>
