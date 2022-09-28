@@ -32,6 +32,38 @@ body {
   background-image: url(./images/gino-xZdwU-Yiqzc-unsplash.jpg);
   background-size: cover;
   background-position: 50%;
+
+  position: relative;
+}
+
+.sign-up__photo::before {
+  content: "";
+  background-image: linear-gradient(
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0),
+    rgb(0 0 0 / 0.7)
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.photo__credits a,
+.photo__credits {
+  text-decoration: none;
+  font-style: none;
+  color: white;
+  font-weight: 700;
+}
+
+.photo__credits {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1em;
 }
 
 .sign-up__section {
@@ -47,11 +79,15 @@ body {
 
 .section__texts {
   width: min(100%, 75ch);
+  display: grid;
+  gap: 1em;
+
+  font-size: 1.2em;
 }
 
 #form {
   display: grid;
-  grid-template-columns: minmax(min(200px, 100%), 300px);
+  grid-template-columns: repeat(auto-fit, minmax(max(200px, 50%), 1fr));
 }
 
 .form__div {
@@ -61,5 +97,5 @@ body {
 }
 
 .form__div > label {
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
