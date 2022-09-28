@@ -38,6 +38,12 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 800px) {
+  .sign-up__photo {
+    height: 50vh;
+  }
+}
+
 .sign-up__photo::before {
   content: "";
   background-image: linear-gradient(
